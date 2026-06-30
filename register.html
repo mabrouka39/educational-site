@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إنشاء حساب - نور المعرفة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .auth-wrapper {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #302851 0%, #224bcf 50%, #fa1d86 100%);
+            padding: 2rem;
+        }
+        .auth-card {
+            background: #fff;
+            border-radius: 1.5rem;
+            padding: 4rem;
+            width: 100%;
+            max-width: 55rem;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+        }
+        .auth-logo {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        .auth-logo i { font-size: 5rem; color: #fa1d86; }
+        .auth-logo h2 { font-size: 2.8rem; color: #302851; margin-top: 1rem; }
+        .auth-logo p { font-size: 1.5rem; color: #888; margin-top: 0.5rem; }
+        .auth-field {
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        .auth-field label {
+            display: block;
+            font-size: 1.6rem;
+            color: #302851;
+            margin-bottom: 0.7rem;
+            font-weight: 600;
+        }
+        .auth-field input {
+            width: 100%;
+            padding: 1.3rem 1.5rem 1.3rem 4.5rem;
+            font-size: 1.6rem;
+            border: 2px solid #e8eaf6;
+            border-radius: 0.8rem;
+            background: #f8f9ff;
+            color: #333;
+            transition: all 0.3s;
+            font-family: 'Cairo', sans-serif;
+        }
+        .auth-field input:focus {
+            border-color: #224bcf;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(34,75,207,0.1);
+        }
+        .auth-field input.error { border-color: #e53935; }
+        .auth-field input.success { border-color: #43a047; }
+        .auth-field .field-icon {
+            position: absolute;
+            left: 1.5rem;
+            top: 50%;
+            transform: translateY(50%);
+            color: #224bcf;
+            font-size: 1.8rem;
+        }
+        .field-hint {
+            font-size: 1.3rem;
+            color: #888;
+            margin-top: 0.4rem;
+        }
+        .field-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        .auth-btn {
+            width: 100%;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #fa1d86, #224bcf);
+            color: #fff;
+            border: none;
+            border-radius: 0.8rem;
+            font-size: 1.8rem;
+            font-family: 'Cairo', sans-serif;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 1rem;
+        }
+        .auth-btn:hover {
+            background: linear-gradient(135deg, #224bcf, #302851);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(250,29,134,0.3);
+        }
+        .auth-links {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 1.5rem;
+            color: #666;
+        }
+        .auth-links a { color: #224bcf; font-weight: 600; }
+        .auth-links a:hover { color: #fa1d86; }
+        .terms-check {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            font-size: 1.5rem;
+            color: #555;
+            margin: 1rem 0;
+        }
+        .terms-check input[type="checkbox"] { width: 1.8rem; height: 1.8rem; accent-color: #224bcf; cursor: pointer; }
+        .terms-check a { color: #224bcf; }
+        .password-strength {
+            height: 0.5rem;
+            border-radius: 0.3rem;
+            margin-top: 0.8rem;
+            background: #e0e0e0;
+            overflow: hidden;
+        }
+        .password-strength-bar {
+            height: 100%;
+            width: 0;
+            border-radius: 0.3rem;
+            transition: all 0.4s;
+        }
+        @media (max-width: 600px) {
+            .auth-card { padding: 2.5rem 2rem; }
+            .field-row { grid-template-columns: 1fr; gap: 0; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <a href="index.html" class="logo logo-with-img"><img src="images/logo.svg" alt="نور المعرفة" class="logo-img"><span class="logo-text">نور المعرفة</span></a>
+    <div id="menu-btn" class="fas fa-bars"></div>
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="#">الدروس +</a>
+                <ul>
+                    <li><a href="course-1.html">التعليم الابتدائي</a></li>
+                    <li><a href="course-2.html">التعليم المتوسط</a></li>
+                    <li><a href="course-3.html">التعليم الثانوي</a></li>
+                    <li><a href="course-4.html">التعليم الجامعي</a></li>
+                </ul>
+            </li>
+            <li><a href="#">صفحات +</a>
+                <ul>
+                    <li><a href="teachers.html">الأساتذة</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="training.html">الدورات التكوينية</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+    <div class="header-auth-btns">
+        <a href="login.html" class="btn-login">دخول</a>
+        <a href="register.html" class="btn-register">تسجيل</a>
+    </div>
+</header>
+
+<div class="auth-wrapper">
+    <div class="auth-card">
+        <div class="auth-logo">
+            <i class="fas fa-user-plus"></i>
+            <h2>إنشاء حساب جديد</h2>
+            <p>انضم إلى آلاف الطلبة وابدأ رحلة التعلم الآن</p>
+        </div>
+
+        <div class="auth-field">
+            <label for="fullname">الاسم الكامل</label>
+            <span class="field-icon"><i class="fas fa-user"></i></span>
+            <input type="text" id="fullname" placeholder="أدخل اسمك الكامل" autocomplete="name">
+        </div>
+
+        <div class="auth-field">
+            <label for="email">البريد الإلكتروني</label>
+            <span class="field-icon"><i class="fas fa-envelope"></i></span>
+            <input type="email" id="email" placeholder="example@email.com" autocomplete="email">
+        </div>
+
+        <div class="auth-field">
+            <label for="password">كلمة المرور</label>
+            <span class="field-icon"><i class="fas fa-lock"></i></span>
+            <input type="password" id="password" placeholder="8 أحرف على الأقل" oninput="checkStrength(this.value)">
+            <div class="password-strength">
+                <div class="password-strength-bar" id="strength-bar"></div>
+            </div>
+            <p class="field-hint" id="strength-text">أدخل كلمة مرور قوية تحتوي على أحرف وأرقام</p>
+        </div>
+
+        <div class="auth-field">
+            <label for="confirm-password">تأكيد كلمة المرور</label>
+            <span class="field-icon"><i class="fas fa-lock"></i></span>
+            <input type="password" id="confirm-password" placeholder="أعد كتابة كلمة المرور">
+        </div>
+
+        <div class="terms-check">
+            <input type="checkbox" id="terms">
+            <label for="terms">أوافق على <a href="#">شروط الاستخدام</a> و<a href="#">سياسة الخصوصية</a></label>
+        </div>
+
+        <button class="auth-btn" onclick="handleRegister()">
+            <i class="fas fa-user-check" style="margin-left:0.8rem;"></i> إنشاء الحساب
+        </button>
+
+        <div class="auth-links">
+            لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a>
+        </div>
+    </div>
+</div>
+
+<script src="js/script.js"></script>
+<script>
+function checkStrength(val) {
+    const bar = document.getElementById('strength-bar');
+    const text = document.getElementById('strength-text');
+    let strength = 0;
+    if (val.length >= 8) strength++;
+    if (/[A-Z]/.test(val) || /[a-z]/.test(val)) strength++;
+    if (/[0-9]/.test(val)) strength++;
+    if (/[^a-zA-Z0-9]/.test(val)) strength++;
+    const levels = [
+        { w: '0%', color: '#e0e0e0', label: '' },
+        { w: '30%', color: '#e53935', label: 'ضعيفة' },
+        { w: '60%', color: '#fb8c00', label: 'متوسطة' },
+        { w: '85%', color: '#43a047', label: 'جيدة' },
+        { w: '100%', color: '#1b5e20', label: 'قوية جداً' },
+    ];
+    const l = levels[strength] || levels[0];
+    bar.style.width = l.w;
+    bar.style.background = l.color;
+    text.textContent = l.label ? `قوة كلمة المرور: ${l.label}` : 'أدخل كلمة مرور قوية تحتوي على أحرف وأرقام';
+}
+
+function handleRegister() {
+
+    const name = document.getElementById('fullname').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const pass = document.getElementById('password').value;
+    const confirm = document.getElementById('confirm-password').value;
+
+    if (!name || !email || !pass || !confirm) {
+        alert('يرجى ملء جميع الحقول');
+        return;
+    }
+
+    if (pass !== confirm) {
+        alert('كلمة المرور غير متطابقة');
+        return;
+    }
+
+    // 👇 هذا هو التصحيح الحقيقي
+    registerUser(name, email, pass, "ثانوي");
+}
+
+    registerUser(
+        {
+  name: "honi",
+  email: "QSS@gmail.com",
+  stage: "ثانوي",
+  status: "pending"
+}
+    );
+
+
+    
+
+
+
+</script>
+
+<script src="js/auth.js"></script>
+
+
+</body>
+</html>
+
+

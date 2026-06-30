@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نور المعرفة | منصة تعليمية جزائرية</title>
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <a href="index.html" class="logo logo-with-img"><img src="images/logo-removebg-preview.png" alt="نور المعرفة" class="logo-img"><span class="logo-text">نور المعرفة</span></a>
+
+    <div id="menu-btn" class="fas fa-bars"></div>
+
+    <nav class="navbar">
+        <ul>
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="#">الدروس +</a>
+                <ul>
+                    <li><a href="course-1.html">التعليم الابتدائي</a></li>
+                    <li><a href="course-2.html">التعليم المتوسط</a></li>
+                    <li><a href="course-3.html">التعليم الثانوي</a></li>
+                    <li><a href="course-4.html">التعليم الجامعي</a></li>
+                </ul>
+            </li>
+            <li><a href="#">صفحات +</a>
+                <ul>
+                    <li><a href="teachers.html">الأساتذة</a></li>
+                    <li><a href="blog.html">المدونة</a></li>
+                    <li><a href="training.html">الدورات التكوينية</a></li>
+                    <li><a href="reviews.html">آراء الطلبة</a></li>
+                </ul>
+            </li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+    </nav>
+    <div class="header-auth-btns">
+        <a href="login.html" class="btn-login">دخول</a>
+        <a href="register.html" class="btn-register">تسجيل</a>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- home section starts  -->
+
+<section class="home">
+
+    <div class="image">
+        <img src="images/home-img.png" alt="منصة تعليمية">
+    </div>
+
+    <div class="content">
+        <h3>طريقك نحو التميز الدراسي</h3>
+        <p>منصة تعليمية جزائرية متكاملة تقدم دروساً للأطوار الابتدائي والمتوسط والثانوي، إضافة إلى دورات تكوينية احترافية. تعلّم بأسلوب مبتكر مع أفضل الأساتذة.</p>
+        <a href="course-1.html" class="btn">ابدأ التعلم الآن</a>
+    </div>
+
+</section>
+
+<!-- home section ends -->
+
+<!-- categories section starts  -->
+
+<section class="category">
+
+    <a href="course-1.html" class="box">
+        <img src="images/category-1.png" alt="الطور الابتدائي">
+        <h3>الطور الابتدائي</h3>
+    </a>
+
+    <a href="course-2.html" class="box">
+        <img src="images/category-2.png" alt="الطور المتوسط">
+        <h3>الطور المتوسط</h3>
+    </a>
+
+    <a href="course-3.html" class="box">
+        <img src="images/category-3.png" alt="الطور الثانوي">
+        <h3>الطور الثانوي</h3>
+    </a>
+
+    <a href="training.html" class="box">
+        <img src="images/category-4.png" alt="الدورات التكوينية">
+        <h3>الدورات التكوينية</h3>
+    </a>
+
+    <a href="course-4.html" class="box">
+        <img src="images/category-4.png" alt="الطور الجامعي">
+        <h3>الطور الجامعي</h3>
+    </a>
+
+    <a href="teachers.html" class="box">
+        <img src="images/category-5.png" alt="فريق الأساتذة">
+        <h3>فريق الأساتذة</h3>
+    </a>
+
+</section>
+
+<!-- categories section ends -->
+
+<!-- ===== قسم الأطوار التعليمية مع السنوات ===== -->
+<section class="stages-section">
+    <div class="section-header">
+        <h2>اختر طورك التعليمي</h2>
+        <p>انقر على الطور الدراسي لعرض السنوات المتاحة</p>
+    </div>
+
+    <div class="stages-buttons">
+        <a href="#" class="stage-btn" data-stage="ابتدائي" onclick="toggleYears(event, 'years-ibtidai')">
+            <i class="fas fa-child"></i> التعليم الابتدائي
+        </a>
+        <a href="#" class="stage-btn" data-stage="متوسط" onclick="toggleYears(event, 'years-mutawassit')">
+            <i class="fas fa-user-graduate"></i> التعليم المتوسط
+        </a>
+        <a href="#" class="stage-btn" data-stage="ثانوي" onclick="toggleYears(event, 'years-thanawi')">
+            <i class="fas fa-graduation-cap"></i> التعليم الثانوي
+        </a>
+        <a href="#" class="stage-btn" data-stage="جامعي" onclick="toggleYears(event, 'years-jamei')">
+            <i class="fas fa-university"></i> التعليم الجامعي
+        </a>
+    </div>
+
+    <!-- السنوات الابتدائية -->
+    <div id="years-ibtidai" class="years-panel">
+        <div class="panel-title">
+            <i class="fas fa-child" style="color:#fa1d86"></i> التعليم الابتدائي - اختر السنة
+        </div>
+        <div class="years-grid">
+            <a href="course-1.html" class="year-card">
+                <i class="fas fa-star"></i>
+                السنة الأولى ابتدائي
+            </a>
+            <a href="course-1.html" class="year-card">
+                <i class="fas fa-star"></i>
+                السنة الثانية ابتدائي
+            </a>
+            <a href="course-1.html" class="year-card">
+                <i class="fas fa-star"></i>
+                السنة الثالثة ابتدائي
+            </a>
+            <a href="course-1.html" class="year-card">
+                <i class="fas fa-star"></i>
+                السنة الرابعة ابتدائي
+            </a>
+            <a href="course-1.html" class="year-card">
+                <i class="fas fa-star"></i>
+                السنة الخامسة ابتدائي
+            </a>
+        </div>
+        <a href="course-1.html" class="panel-go-btn">
+            <i class="fas fa-arrow-left"></i> الانتقال إلى التعليم الابتدائي
+        </a>
+    </div>
+
+    <!-- السنوات المتوسطة -->
+    <div id="years-mutawassit" class="years-panel">
+        <div class="panel-title">
+            <i class="fas fa-user-graduate" style="color:#fa1d86"></i> التعليم المتوسط - اختر السنة
+        </div>
+        <div class="years-grid">
+            <a href="course-2.html" class="year-card">
+                <i class="fas fa-book"></i>
+                السنة الأولى متوسط
+            </a>
+            <a href="course-2.html" class="year-card">
+                <i class="fas fa-book"></i>
+                السنة الثانية متوسط
+            </a>
+            <a href="course-2.html" class="year-card">
+                <i class="fas fa-book"></i>
+                السنة الثالثة متوسط
+            </a>
+            <a href="course-2.html" class="year-card">
+                <i class="fas fa-book"></i>
+                السنة الرابعة متوسط
+            </a>
+        </div>
+        <a href="course-2.html" class="panel-go-btn">
+            <i class="fas fa-arrow-left"></i> الانتقال إلى التعليم المتوسط
+        </a>
+    </div>
+
+    <!-- السنوات الثانوية -->
+    <div id="years-thanawi" class="years-panel">
+        <div class="panel-title">
+            <i class="fas fa-graduation-cap" style="color:#fa1d86"></i> التعليم الثانوي - اختر السنة
+        </div>
+        <div class="years-grid">
+            <a href="course-3.html" class="year-card">
+                <i class="fas fa-award"></i>
+                السنة الأولى ثانوي
+            </a>
+            <a href="course-3.html" class="year-card">
+                <i class="fas fa-award"></i>
+                السنة الثانية ثانوي
+            </a>
+            <a href="course-3.html" class="year-card">
+                <i class="fas fa-award"></i>
+                السنة الثالثة ثانوي
+            </a>
+        </div>
+        <a href="course-3.html" class="panel-go-btn">
+            <i class="fas fa-arrow-left"></i> الانتقال إلى التعليم الثانوي
+        </a>
+    </div>
+
+    <!-- السنوات الجامعية -->
+    <div id="years-jamei" class="years-panel">
+        <div class="panel-title">
+            <i class="fas fa-university" style="color:#fa1d86"></i> التعليم الجامعي - اختر المستوى
+        </div>
+        <div class="years-grid">
+            <a href="course-4.html" class="year-card university">
+                <i class="fas fa-university"></i>
+                ليسانس 1
+            </a>
+            <a href="course-4.html" class="year-card university">
+                <i class="fas fa-university"></i>
+                ليسانس 2
+            </a>
+            <a href="course-4.html" class="year-card university">
+                <i class="fas fa-university"></i>
+                ليسانس 3
+            </a>
+            <a href="course-4.html" class="year-card master">
+                <i class="fas fa-user-tie"></i>
+                ماستر 1
+            </a>
+            <a href="course-4.html" class="year-card master">
+                <i class="fas fa-user-tie"></i>
+                ماستر 2
+            </a>
+        </div>
+        <a href="course-4.html" class="panel-go-btn">
+            <i class="fas fa-arrow-left"></i> الانتقال إلى التعليم الجامعي
+        </a>
+    </div>
+
+</section>
+<!-- ===== نهاية قسم الأطوار التعليمية ===== -->
+
+<!-- reviews section starts -->
+<section style="padding:4rem 9%;background:#f4f6ff;">
+    <div style="text-align:center;margin-bottom:3rem;">
+        <h2 style="font-size:3.5rem;color:#302851;font-family:'Cairo',sans-serif;">ماذا يقول طلبتنا؟</h2>
+        <p style="font-size:1.6rem;color:#666;margin-top:0.5rem;">آراء حقيقية من طلبة يثقون في منصة نور المعرفة</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(30rem,1fr));gap:2rem;margin-bottom:3rem;">
+
+        <div style="background:#fff;border-radius:1rem;padding:2.5rem;box-shadow:0 4px 15px rgba(0,0,0,0.07);border-right:4px solid #224bcf;">
+            <div style="color:#ffd700;font-size:1.6rem;margin-bottom:1rem;">★★★★★</div>
+            <p style="font-size:1.5rem;color:#555;line-height:2;font-style:italic;">"منصة رائعة ساعدتني في تجاوز شهادة البكالوريا بتفوق. الشروحات واضحة والأساتذة محترفون."</p>
+            <div style="margin-top:1.5rem;display:flex;align-items:center;gap:1rem;">
+                <div style="width:4.5rem;height:4.5rem;background:linear-gradient(135deg,#224bcf,#fa1d86);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;font-weight:700;">ي</div>
+                <div>
+                    <div style="font-size:1.6rem;font-weight:700;color:#302851;">يوسف قداري</div>
+                    <div style="font-size:1.3rem;color:#888;">طالب ثانوي</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background:#fff;border-radius:1rem;padding:2.5rem;box-shadow:0 4px 15px rgba(0,0,0,0.07);border-right:4px solid #fa1d86;">
+            <div style="color:#ffd700;font-size:1.6rem;margin-bottom:1rem;">★★★★★</div>
+            <p style="font-size:1.5rem;color:#555;line-height:2;font-style:italic;">"الدروس الجامعية في البرمجة ممتازة جداً. استطعت اجتياز مادة الخوارزميات بفضل هذه المنصة."</p>
+            <div style="margin-top:1.5rem;display:flex;align-items:center;gap:1rem;">
+                <div style="width:4.5rem;height:4.5rem;background:linear-gradient(135deg,#fa1d86,#302851);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;font-weight:700;">أ</div>
+                <div>
+                    <div style="font-size:1.6rem;font-weight:700;color:#302851;">أمينة بوعزة</div>
+                    <div style="font-size:1.3rem;color:#888;">طالبة جامعية</div>
+                </div>
+            </div>
+        </div>
+
+        <div style="background:#fff;border-radius:1rem;padding:2.5rem;box-shadow:0 4px 15px rgba(0,0,0,0.07);border-right:4px solid #224bcf;">
+            <div style="color:#ffd700;font-size:1.6rem;margin-bottom:1rem;">★★★★☆</div>
+            <p style="font-size:1.5rem;color:#555;line-height:2;font-style:italic;">"اشتركت لأطفالي في الطور الابتدائي والنتائج مذهلة. تحسّن مستواهم بشكل ملحوظ في الرياضيات."</p>
+            <div style="margin-top:1.5rem;display:flex;align-items:center;gap:1rem;">
+                <div style="width:4.5rem;height:4.5rem;background:linear-gradient(135deg,#302851,#224bcf);border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:2rem;font-weight:700;">ن</div>
+                <div>
+                    <div style="font-size:1.6rem;font-weight:700;color:#302851;">نادية حمداوي</div>
+                    <div style="font-size:1.3rem;color:#888;">أمّ وليّة أمر</div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div style="text-align:center;">
+        <a href="reviews.html" class="btn" style="font-size:1.7rem;padding:1.2rem 3.5rem;">عرض جميع التقييمات <i class="fas fa-arrow-left" style="margin-right:0.5rem;"></i></a>
+    </div>
+</section>
+<!-- reviews section ends -->
+
+<!-- Login/Register CTA -->
+<section style="padding:4rem 9%;background:linear-gradient(135deg,#224bcf,#302851);text-align:center;">
+    <h2 style="font-size:3rem;color:#fff;margin-bottom:1rem;">ابدأ رحلتك التعليمية اليوم!</h2>
+    <p style="font-size:1.7rem;color:rgba(255,255,255,0.85);margin-bottom:2.5rem;">سجّل حسابك مجاناً وانضم إلى أكثر من 12,000 طالب</p>
+    <div style="display:flex;gap:1.5rem;justify-content:center;flex-wrap:wrap;">
+        <a href="register.html" style="padding:1.3rem 4rem;background:#fa1d86;color:#fff;border-radius:0.8rem;font-size:1.8rem;font-family:'Cairo',sans-serif;text-decoration:none;transition:all 0.3s;">
+            <i class="fas fa-user-plus" style="margin-left:0.7rem;"></i> إنشاء حساب مجاني
+        </a>
+        <a href="login.html" style="padding:1.3rem 4rem;background:rgba(255,255,255,0.15);color:#fff;border-radius:0.8rem;font-size:1.8rem;font-family:'Cairo',sans-serif;text-decoration:none;border:2px solid rgba(255,255,255,0.4);transition:all 0.3s;">
+            <i class="fas fa-sign-in-alt" style="margin-left:0.7rem;"></i> تسجيل الدخول
+        </a>
+    </div>
+</section>
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>استكشف</h3>
+            <a href="index.html"> <i class="fas fa-arrow-left"></i> الرئيسية </a>
+            <a href="about.html"> <i class="fas fa-arrow-left"></i> من نحن </a>
+            <a href="course-1.html"> <i class="fas fa-arrow-left"></i> التعليم الابتدائي </a>
+            <a href="course-2.html"> <i class="fas fa-arrow-left"></i> التعليم المتوسط </a>
+            <a href="course-3.html"> <i class="fas fa-arrow-left"></i> التعليم الثانوي </a>
+            <a href="training.html"> <i class="fas fa-arrow-left"></i> الدورات التكوينية </a>
+            <a href="teachers.html"> <i class="fas fa-arrow-left"></i> الأساتذة </a>
+            <a href="blog.html"> <i class="fas fa-arrow-left"></i> المدونة </a>
+            <a href="contact.html"> <i class="fas fa-arrow-left"></i> تواصل معنا </a>
+        </div>
+
+        <div class="box">
+            <h3>الأقسام الدراسية</h3>
+            <a href="course-1.html"> <i class="fas fa-arrow-left"></i> التعليم الابتدائي </a>
+            <a href="course-2.html"> <i class="fas fa-arrow-left"></i> التعليم المتوسط </a>
+            <a href="course-3.html"> <i class="fas fa-arrow-left"></i> التعليم الثانوي </a>
+            <a href="course-4.html"> <i class="fas fa-arrow-left"></i> التعليم الجامعي </a>
+            <a href="training.html"> <i class="fas fa-arrow-left"></i> الدورات التكوينية </a>
+        </div>
+
+        <div class="box">
+            <h3>روابط سريعة</h3>
+            <a href="login.html"> <i class="fas fa-arrow-left"></i> تسجيل الدخول </a>
+            <a href="register.html"> <i class="fas fa-arrow-left"></i> إنشاء حساب </a>
+            <a href="reviews.html"> <i class="fas fa-arrow-left"></i> آراء الطلاب </a>
+            <a href="#"> <i class="fas fa-arrow-left"></i> مركز المساعدة </a>
+            <a href="#"> <i class="fas fa-arrow-left"></i> الشهادات </a>
+        </div>
+
+        <div class="box">
+            <h3>تابعنا</h3>
+            <a href="#"> <i class="fab fa-facebook-f"></i> فيسبوك </a>
+            <a href="#"> <i class="fab fa-twitter"></i> تويتر </a>
+            <a href="#"> <i class="fab fa-linkedin"></i> لينكد إن </a>
+            <a href="#"> <i class="fab fa-instagram"></i> إنستغرام </a>
+            <a href="#"> <i class="fab fa-youtube"></i> يوتيوب </a>
+            <a href="#"> <i class="fab fa-telegram"></i> تيليغرام </a>
+        </div>
+
+    </div>
+
+    <div class="credit"> نور المعرفة &copy; <span>2024</span> | جميع الحقوق محفوظة </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
